@@ -1,0 +1,132 @@
+.header {
+  position: relative;
+  background: linear-gradient(160deg, var(--crimson-dark) 0%, var(--crimson) 55%, var(--wood-mid) 100%);
+  overflow: hidden;
+  padding: 56px 24px 48px;
+  text-align: center;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(ellipse at 20% 50%, rgba(201, 168, 76, 0.08) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 20%, rgba(244, 194, 194, 0.06) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.petalsContainer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.petal {
+  position: absolute;
+  top: -20px;
+  border-radius: 80% 0 80% 0;
+  background: linear-gradient(135deg, var(--sakura) 0%, var(--sakura-deep) 100%);
+  animation: petalFall linear infinite;
+  transform-origin: center center;
+}
+
+@keyframes petalFall {
+  0% {
+    transform: translateY(-20px) rotate(0deg) translateX(0);
+    opacity: 0;
+  }
+  10% { opacity: 1; }
+  90% { opacity: 0.7; }
+  100% {
+    transform: translateY(300px) rotate(360deg) translateX(60px);
+    opacity: 0;
+  }
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.kanji {
+  font-family: var(--font-display);
+  font-size: 3.8rem;
+  font-weight: 300;
+  color: var(--gold);
+  letter-spacing: 0.15em;
+  text-shadow: 0 2px 20px rgba(201, 168, 76, 0.4);
+  line-height: 1;
+}
+
+.dividerLine {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dividerDot {
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--gold-light);
+  opacity: 0.7;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--white);
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+}
+
+.subtitle {
+  font-family: var(--font-ui);
+  font-size: 0.68rem;
+  font-weight: 300;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  opacity: 0.85;
+}
+
+.badgeRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.badge {
+  font-family: var(--font-ui);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 6px 14px;
+  border-radius: 20px;
+  backdrop-filter: blur(4px);
+}
+
+.badgeDivider {
+  color: var(--gold-light);
+  opacity: 0.6;
+  font-size: 1rem;
+}
+
+@media (max-width: 480px) {
+  .kanji { font-size: 2.8rem; }
+  .title { font-size: 1.6rem; }
+  .badgeRow { flex-direction: column; gap: 6px; }
+}

@@ -1,0 +1,169 @@
+.wrap {
+  background: var(--white);
+  border: 1px solid var(--mist);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  max-width: 640px;
+}
+
+.header {
+  background: linear-gradient(135deg, var(--crimson) 0%, var(--crimson-dark) 100%);
+  padding: 18px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.monthTitle {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--white);
+  letter-spacing: 0.04em;
+}
+
+.navBtn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.25);
+  background: rgba(255,255,255,0.1);
+  color: var(--white);
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: all var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navBtn:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  padding: 12px 20px;
+  background: var(--cream);
+  border-bottom: 1px solid var(--mist);
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.62rem;
+  color: var(--wood-mid);
+}
+
+.dotBooked  { display:inline-block;width:10px;height:10px;border-radius:2px;background:var(--crimson); }
+.dotBlocked { display:inline-block;width:10px;height:10px;border-radius:2px;background:var(--wood-mid); }
+.dotWE      { display:inline-block;width:10px;height:10px;border-radius:2px;background:rgba(139,26,43,0.15);border:1.5px solid var(--crimson); }
+.dotFree    { display:inline-block;width:10px;height:10px;border-radius:2px;background:var(--mist); }
+
+.dayHeaders {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  background: var(--wood);
+  padding: 0 12px;
+}
+
+.dayLabel {
+  text-align: center;
+  font-size: 0.58rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  padding: 8px 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+  padding: 12px;
+}
+
+.cell {
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+  position: relative;
+  cursor: pointer;
+  transition: all var(--transition);
+  gap: 2px;
+}
+
+.past {
+  opacity: 0.3;
+  cursor: default;
+  background: var(--cream-dark);
+}
+
+.booked {
+  background: rgba(139,26,43,0.12);
+  border: 1.5px solid var(--crimson);
+  cursor: default;
+}
+
+.blocked {
+  background: rgba(59,35,20,0.15);
+  border: 1.5px solid var(--wood-mid);
+}
+
+.blocked:hover {
+  background: rgba(59,35,20,0.25);
+}
+
+.weekend {
+  background: var(--cream);
+  border: 1px solid var(--mist);
+}
+
+.weekend:hover {
+  background: var(--mist);
+}
+
+.free {
+  background: var(--cream);
+  border: 1px solid transparent;
+}
+
+.free:hover {
+  background: var(--sakura);
+  border-color: var(--crimson-light);
+}
+
+.today {
+  outline: 2px solid var(--gold);
+  outline-offset: 1px;
+}
+
+.dayNum {
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--ink);
+  line-height: 1;
+}
+
+.booked .dayNum { color: var(--crimson); font-weight: 600; }
+.blocked .dayNum { color: var(--wood); font-weight: 600; }
+
+.cellTag {
+  font-size: 0.38rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: inherit;
+  opacity: 0.8;
+  line-height: 1;
+}

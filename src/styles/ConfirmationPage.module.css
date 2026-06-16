@@ -1,0 +1,269 @@
+.page {
+  min-height: 80vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 48px 24px;
+  background: var(--cream);
+}
+
+.container {
+  max-width: 680px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+.messengerLink {
+  color: var(--crimson);
+  text-decoration: none;
+  word-break: break-all;
+}
+
+.messengerLink:hover {
+  text-decoration: underline;
+}
+
+/* ── Payment Receipt Block ──────────────────────────────────────────── */
+.receiptBlock {
+  margin: 0 32px 24px;
+  padding: 20px;
+  background: var(--cream);
+  border: 1px solid var(--cream-dark);
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+}
+
+.receiptImage {
+  max-width: 220px;
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid var(--mist);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  background: var(--white);
+}
+
+.receiptPdfLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--crimson);
+  text-decoration: none;
+  border: 1.5px solid var(--crimson);
+  border-radius: var(--radius-md);
+  padding: 10px 20px;
+  transition: all var(--transition);
+}
+
+.receiptPdfLink:hover {
+  background: var(--crimson);
+  color: var(--white);
+}
+
+.receiptBlock .detailLabel {
+  align-self: center;
+}
+
+.receiptBlock .detailNote {
+  color: #2e7d32;
+  font-weight: 500;
+}
+
+@media (max-width: 600px) {
+  .receiptBlock { margin: 0 20px 20px; padding: 16px; }
+}
+.successBadge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, var(--teal) 0%, #2a7a74 100%);
+  color: white;
+  padding: 12px 28px;
+  border-radius: 30px;
+  box-shadow: 0 6px 24px rgba(27, 94, 90, 0.3);
+}
+
+.successIcon {
+  font-size: 1.2rem;
+  color: var(--gold-light);
+}
+
+.successLabel {
+  font-family: var(--font-ui);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.card {
+  width: 100%;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-deep);
+  overflow: hidden;
+  border: 1px solid var(--mist);
+}
+
+.cardHeader {
+  background: linear-gradient(135deg, var(--crimson-dark) 0%, var(--crimson) 60%, var(--wood-mid) 100%);
+  padding: 28px 32px;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.kanji {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  color: var(--gold);
+  line-height: 1;
+  text-shadow: 0 2px 12px rgba(201, 168, 76, 0.4);
+  flex-shrink: 0;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: 1.7rem;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--white);
+  line-height: 1.2;
+  margin-bottom: 6px;
+}
+
+.subtitle {
+  font-size: 0.72rem;
+  color: var(--gold-light);
+  font-weight: 300;
+  letter-spacing: 0.04em;
+}
+
+.refRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 32px;
+  background: rgba(139, 26, 43, 0.04);
+  border-bottom: 1px solid var(--mist);
+}
+
+.refLabel {
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--wood-mid);
+}
+
+.refCode {
+  font-family: 'Courier New', monospace;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--crimson);
+  letter-spacing: 0.15em;
+  background: var(--cream-dark);
+  padding: 4px 14px;
+  border-radius: 6px;
+}
+
+.detailsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  padding: 24px 32px;
+  row-gap: 20px;
+  column-gap: 32px;
+}
+
+.detailBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.fullWidth {
+  grid-column: 1 / -1;
+}
+
+.detailLabel {
+  font-size: 0.58rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--crimson);
+}
+
+.detailValue {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  color: var(--ink);
+}
+
+.totalVal {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--crimson);
+}
+
+.detailNote {
+  font-size: 0.68rem;
+  color: var(--wood-mid);
+  font-style: italic;
+}
+
+.notice {
+  margin: 0 32px 24px;
+  padding: 16px;
+  background: var(--cream);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--cream-dark);
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.noticeIcon {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.notice p {
+  font-size: 0.72rem;
+  color: var(--wood-mid);
+  line-height: 1.6;
+}
+
+.newBookingBtn {
+  font-family: var(--font-ui);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--crimson);
+  background: none;
+  border: 1.5px solid var(--crimson);
+  border-radius: var(--radius-md);
+  padding: 12px 28px;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.newBookingBtn:hover {
+  background: var(--crimson);
+  color: var(--white);
+}
+
+@media (max-width: 600px) {
+  .detailsGrid { grid-template-columns: 1fr; }
+  .cardHeader { flex-direction: column; gap: 12px; padding: 20px; }
+  .refRow, .notice { padding-left: 20px; padding-right: 20px; }
+  .detailsGrid { padding: 20px; }
+}

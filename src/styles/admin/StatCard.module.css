@@ -1,0 +1,67 @@
+.card {
+  background: var(--white);
+  border: 1px solid var(--mist);
+  border-radius: var(--radius-lg);
+  padding: 20px 22px;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  box-shadow: var(--shadow-soft);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-card);
+}
+
+.iconWrap {
+  font-size: 1.6rem;
+  width: 44px;
+  height: 44px;
+  background: var(--cream);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.crimson .iconWrap { background: rgba(139,26,43,0.08); }
+.teal .iconWrap    { background: rgba(27,94,90,0.08); }
+.gold .iconWrap    { background: rgba(201,168,76,0.12); }
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.value {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1;
+}
+
+.crimson .value { color: var(--crimson); }
+.teal .value    { color: var(--teal); }
+.gold .value    { color: var(--wood-mid); }
+
+.label {
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--wood-mid);
+  margin-top: 2px;
+}
+
+.sub {
+  font-size: 0.68rem;
+  color: #aaa;
+  font-style: italic;
+  margin-top: 2px;
+}
